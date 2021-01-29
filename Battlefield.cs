@@ -39,7 +39,10 @@ namespace robots_v_Dino_Jan28
                     {
                         break;
                     }
+                    
                 }
+                Herd.theHerd[0].Attack(Fleet.theFleet[0]);
+                
                 if (Fleet.theFleet[0].health <= 0)
                 {
                     Fleet.theFleet.RemoveAt(0);

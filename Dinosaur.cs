@@ -20,7 +20,7 @@ namespace robots_v_Dino_Jan28
             this.name = incomingType;
             this.health = incomingHealth;
             this.energy = incomingEnergy;
-            this.attackPower = 10;
+            this.attackPower = 0;
         }
         //methods
         public void Attack(Robot robot)
