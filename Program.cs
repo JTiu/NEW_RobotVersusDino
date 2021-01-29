@@ -10,7 +10,8 @@ namespace robots_v_Dino_Jan28
     {
         static void Main(string[] args)
         {
-           
+            Battlefield myBattle = new Battlefield();
+            myBattle.RunBattle();
         }
             
     }

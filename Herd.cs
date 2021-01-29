@@ -17,7 +17,7 @@ namespace robots_v_Dino_Jan28
         public Dinosaur mydinosaur3;
 
         //constructor //why does my constructor look different from Nevin's?
-        public Herd(string incomingType, int incomingHealth, int incomingEnergy, int IncomingAttackPower)
+        public Herd()
         {
             theHerd = new List<Dinosaur>();
             mydinosaur1 = new Dinosaur("T-Rex", 45, 45, 45);

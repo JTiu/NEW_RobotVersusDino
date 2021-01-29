@@ -9,7 +9,7 @@ namespace robots_v_Dino_Jan28
     public class Dinosaur
     {
         //variables
-        public string type;
+        public string name;
         public int health;
         public int energy;
         public int attackPower;
@@ -17,11 +17,17 @@ namespace robots_v_Dino_Jan28
         //constructor
         public Dinosaur(string incomingType, int incomingHealth, int incomingEnergy, int IncomingAttackPower)
         {
-            this.type = incomingType;
+            this.name = incomingType;
             this.health = incomingHealth;
             this.energy = incomingEnergy;
-            this.energy = IncomingAttackPower;
+            this.attackPower = 10;
         }
         //methods
+        public void Attack(Robot robot)
+        {
+            robot.health -= attackPower;
+            Console.WriteLine(name + " attacked " + robot.name + " for " + attackPower + " damage");
+            Console.WriteLine($"{robot.name} has {robot.name} health remaining");
+        }
     }
 }

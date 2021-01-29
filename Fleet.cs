@@ -8,23 +8,32 @@ namespace robots_v_Dino_Jan28
 {
     public class Fleet
     {
+        //    variables
         public List<Robot> theFleet;
-        //variables
-        public Robot myrobot1;
-        public Robot myrobot2;
-        public Robot myrobot3;
-        //constructor
-        public Fleet(string incomingName, int incomingHealth, int incomingPowerLevel)
-        {
-            myrobot1 = new Robot("R2D2", 50, 50);
-            myrobot2 = new Robot("C3P0", 40, 40);
-            myrobot3 = new Robot("Robby", 30, 30);
 
-            theFleet.Add(myrobot1);
-            theFleet.Add(myrobot2);
-            theFleet.Add(myrobot3);
+        //constructor
+
+        public Fleet()
+        {
+            Random random = new Random();
+            theFleet = new List<Robot>();
+
+
+            Weapon Axe = new Weapon("Axe", 15);
+            Weapon Sword = new Weapon("Sword", 10);
+            Weapon Gun = new Weapon("Gun", 50);
+
+            List<Weapon> TheAresenal = new List<Weapon>() { Axe, Sword, Gun };
+
+            Robot robot1 = new Robot("R2D2", 50, 50, TheAresenal[random.Next(3)]);
+            Robot robot2 = new Robot("C3P0", 50, 50, TheAresenal[random.Next(3)]);
+            Robot robot3 = new Robot("Robby", 40, 20, TheAresenal[random.Next(3)]);
+            theFleet.Add(robot1);
+            theFleet.Add(robot2);
+            theFleet.Add(robot3);
+
         }
-       
-        //methods
+
+
     }
 }

@@ -25,12 +25,12 @@ namespace robots_v_Dino_Jan28
         }
             
         //methods
-        public void Attack(Dinosaur dinoToAttack)
+        public void Attack(Dinosaur dinoToAttack)//using Nevin's code as an example
         {
-            dinoToAttack.health -= AttackWeapon.AttackDamage;
+            dinoToAttack.health -= AttackWeapon.attackDamage;
 
-            Console.WriteLine($"{name} attacked {dinoToAttack.name} for { AttackWeapon.AttackDamage} damage");
-            Console.WriteLine($"{dinoToAttack.name} has {dinoToAttack.health} health remaining")
+            Console.WriteLine($"{name} attacked {dinoToAttack.name} for { AttackWeapon.attackDamage} damage");
+            Console.WriteLine($"{dinoToAttack.name} has {dinoToAttack.health} health remaining");
         }
 
        
